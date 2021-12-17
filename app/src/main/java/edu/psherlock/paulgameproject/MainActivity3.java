@@ -44,7 +44,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     public void doAgain(View view) {
         Intent page1 = new Intent(this,MainActivity.class);
-        String name = String.valueOf(etName);
+        String name = etName.getText().toString();
         DatabaseHandler db = new DatabaseHandler(this);
         db.addHiScore(new HiScore(currentDateandTime, name, score));
         startActivity(page1);
